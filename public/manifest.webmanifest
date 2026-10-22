@@ -1,0 +1,21 @@
+{
+ "name": "Bond Cost Sheet",
+ "short_name": "Bond Cost Sheet",
+ "description": "How large a surety bond your state requires and what the premium usually costs: notary, contractor, auto dealer, title, freight broker and ERISA bonds, without a quote form.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#1F5566",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

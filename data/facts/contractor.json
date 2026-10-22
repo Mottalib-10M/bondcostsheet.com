@@ -1,0 +1,139 @@
+{
+ "CA": {
+  "amount": 25000,
+  "term_years": null,
+  "statute": "Cal. Bus. & Prof. Code \u00a7 7071.6 (SB 607)",
+  "quote": "On January 1, 2023, the contractor license bond, bond of qualifying individual, and disciplinary bond, increased to $25,000 as a result of Senate Bill 607.",
+  "url": "https://www.cslb.ca.gov/contractors/maintain_license/bond_information/bond_requirements.aspx",
+  "note": "Required to issue, reactivate or renew an active license. A separate $25,000 bond of qualifying individual can apply to an RME or RMO, and an LLC also needs a $100,000 worker bond.",
+  "previous_amount": 15000,
+  "variants": [
+   {
+    "label": "Contractor license bond",
+    "amount": 25000
+   },
+   {
+    "label": "Bond of qualifying individual (RME/RMO)",
+    "amount": 25000
+   },
+   {
+    "label": "LLC employee/worker bond (in addition)",
+    "amount": 100000
+   }
+  ]
+ },
+ "WA": {
+  "amount": 30000,
+  "term_years": null,
+  "statute": "RCW 18.27.040",
+  "quote": "a Washington Continuous Contractor Surety Bond in the amount of $30,000 for general contractors and $15,000 for specialty contractors",
+  "url": "https://lni.wa.gov/licensing-permits/contractors/register-as-a-contractor/",
+  "note": "Raised on July 1, 2024 (from $12,000 and $6,000). Contractors with unpaid final judgments post more under WAC 296-200A-030.",
+  "previous_amount": 12000,
+  "variants": [
+   {
+    "label": "General contractor",
+    "amount": 30000
+   },
+   {
+    "label": "Specialty contractor",
+    "amount": 15000
+   }
+  ]
+ },
+ "OR": {
+  "amount": 25000,
+  "term_years": null,
+  "statute": "ORS 701.068 (HB 2922, 2023)",
+  "quote": "Residential General Contractor $20,000 $25,000",
+  "url": "https://www.oregon.gov/ccb/pages/licensing.aspx",
+  "note": "Amounts since January 1, 2024. A contractor with both residential and commercial endorsements posts two bonds.",
+  "variants": [
+   {
+    "label": "Residential general contractor",
+    "amount": 25000
+   },
+   {
+    "label": "Residential specialty contractor",
+    "amount": 20000
+   },
+   {
+    "label": "Residential limited contractor",
+    "amount": 15000
+   },
+   {
+    "label": "Commercial general contractor, level 1",
+    "amount": 80000
+   },
+   {
+    "label": "Commercial specialty contractor, level 1",
+    "amount": 55000
+   },
+   {
+    "label": "Commercial general or specialty, level 2",
+    "amount": 25000
+   }
+  ]
+ },
+ "NV": {
+  "amount": null,
+  "range": [
+   1000,
+   500000
+  ],
+  "term_years": null,
+  "statute": "NRS 624.270",
+  "quote": "the bond can vary in amount from $1,000 to $500,000 based on the type of license, monetary limit, past, present or future financial responsibility, experience, and character of the applicant",
+  "url": "https://www.nvcontractorsboard.com/licensing/bonds/",
+  "note": "The Board sets the amount when it approves the license, from the monetary limit and the applicant's finances. Residential contractors taking deposits above the AB 39 threshold also post a $100,000 consumer protection bond."
+ },
+ "AZ": {
+  "amount": null,
+  "term_years": null,
+  "statute": "A.R.S. \u00a7 32-1152",
+  "quote": "Residential Specialty Contractors | Less than $375,000 | $4,250; $375,000 or more | $7,500",
+  "url": "https://roc.az.gov/bond-information",
+  "note": "Set by license type and estimated annual volume. Residential contractors also pay into the Recovery Fund or post a second $200,000 bond.",
+  "variants": [
+   {
+    "label": "Residential general, volume under $750,000",
+    "amount": 9000
+   },
+   {
+    "label": "Residential general, $750,000 or more",
+    "amount": 15000
+   },
+   {
+    "label": "Residential specialty, under $375,000",
+    "amount": 4250
+   },
+   {
+    "label": "Residential specialty, $375,000 or more",
+    "amount": 7500
+   },
+   {
+    "label": "Commercial general, $150,000 or less",
+    "amount": 5000
+   },
+   {
+    "label": "Commercial general, over $10 million",
+    "amount": 100000
+   }
+  ]
+ },
+ "FL": {
+  "required": false,
+  "amount": null,
+  "term_years": null,
+  "statute": "Fla. Stat. ch. 489; Fla. Admin. Code r. 61G4-15",
+  "quote": "Bonds must be in the amount of $100,000.",
+  "url": "https://www2.myfloridalicense.com/construction-industry/faqs/",
+  "note": "No general contractor license bond statewide. A $100,000 bond applies to a Financially Responsible Officer, and a bond is one way to meet the financial test when the credit score is under 660. Cities and counties may require local bonds.",
+  "variants": [
+   {
+    "label": "Financially Responsible Officer bond",
+    "amount": 100000
+   }
+  ]
+ }
+}

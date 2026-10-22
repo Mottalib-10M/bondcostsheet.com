@@ -1,0 +1,21 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, REVIEW_CYCLE_MONTHS } from '../../data/site-config';
+const lang = 'en';
+---
+<PageLayout title="Editorial policy of Bond Cost Sheet: official amounts, quoted" description="How Bond Cost Sheet writes its pages: bond amounts read on statutes, agencies and eCFR, each quoted and linked; premiums labeled as estimates with their method and sources." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Editorial policy</h1>
+    <h2>Two kinds of figures, never mixed</h2>
+    <p>The amount of a bond is a legal fact: it enters the site only when read on the statute, the session law, the licensing agency, the Secretary of State, the DMV or the federal code, and we keep the address and a short quotation of the line. The premium is a market price that no public body sets: it is always shown as a range, called an estimate, with the published grids it comes from.</p>
+    <h2>How a figure reaches a page</h2>
+    <p>No amount is typed into the text. A script reads the quoted records, writes one table, and every page computes its figures from that table and from the premium grid when the site is built. A state whose amount could not be read on an official page is left out rather than filled with a figure from an agency.</p>
+    <h2>Changes are dated</h2>
+    <p>When a state changed an amount recently, the page shows the old and the new amount with the effective date. A change adopted but not yet in force is shown as to come, never as the current rule.</p>
+    <h2>Independence</h2>
+    <p>{AUTHOR_NAME} receives nothing from sureties, bond agencies, insurers or lead buyers and links to none of them as a sponsor. Agency pages are cited only for their published rate grids, as the source of an estimate. There is no advertising today; if some is added it will be labeled and never placed above a calculator.</p>
+    <h2>Review and corrections</h2>
+    <p>Each rule is reread at least every {REVIEW_CYCLE_MONTHS} months, and sooner when a legislature changes an amount. A reported error is checked against the official page and, once fixed, moves the date shown. Write through the <a href={route('contact', lang)}>contact page</a>; the steps are on the <a href={route('method', lang)}>method page</a>.</p>
+  </div>
+</PageLayout>

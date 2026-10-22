@@ -1,0 +1,68 @@
+---
+/** Method: the documents, the premium model, worked examples, what is left out, the limits. Figures from the kit. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { KIT as K } from '../../lib/kit';
+import { src, table, ext } from '../../lib/helpers';
+import { VALUE } from '../../content/home';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('method', lang);
+const M = K.M;
+const recN = K.TYPES.reduce((a, t) => a + t.states.length, 0);
+const title = 'Surety Bond Method 2026: Amounts Read, Premiums Estimated';
+const description = `Surety bond method for 2026: ${recN} state rules read on statutes, agencies and DMVs, federal rules on eCFR, and how premium ranges by credit score are estimated.`;
+const coverage = K.TYPES.map((t) => [t.label, String(t.states.length), t.states.map((s) => s.code).join(', ')]);
+const changes = K.TYPES.flatMap((t) => t.states.filter((s) => s.previous).map((s) => [t.short, s.name, K.usd(s.previous!), K.usd(K.amt(t.id, s.slug)), s.changed ? K.day(s.changed) : 'see the state page']));
+const tierRows = M.tiers.map((t) => [t.label, ...Object.keys(M.classes).map((c) => `${K.dec(M.classes[c].rates[t.id][0], 2)} to ${K.dec(M.classes[c].rates[t.id][1], 2)}`)]);
+const ex = K.credit('dealer', 't1', K.amt('auto-dealer', 'texas'));
+const ex5 = K.credit('dealer', 't5', K.amt('auto-dealer', 'texas'));
+const exC = K.contract(1000000);
+const exT = K.title(K.R('title', 'texas').multiplier! * 12000);
+const fedRows = [
+  ['Freight broker', K.F('freight-broker').statute, K.usd(K.F('freight-broker').amount)],
+  ['ERISA plan official', K.F('erisa').statute, `10 % of funds handled, ${K.usd(K.F('erisa').min)} minimum, ${K.usd(K.F('erisa').max)} cap (${K.usd(K.F('erisa').max_employer_securities)} with employer securities)`],
+  ['Federal construction', K.F('miller-act').statute, `Performance and payment bonds of 100 % above ${K.usd(K.F('miller-act').threshold)}`],
+  ['Federal bid guarantee', K.F('bid-guarantee').statute, `At least 20 % of the bid, up to ${K.usd(K.F('bid-guarantee').cap)}`],
+  ['Medical equipment supplier (DMEPOS)', K.F('dmepos').statute, K.usd(K.F('dmepos').amount)],
+];
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'Method and sources', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'Method and sources', path }])]} breadcrumbs={[{ label: 'Method and sources' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Method and sources</h1>
+    <p><strong>Every bond amount on this site was read on an official page in October 2026 and is quoted with its link; every premium is an estimate built from rate grids that bond agencies publish, shown as a range for a credit score.</strong> {recN} state rules for {K.TYPES.length} kinds of state bonds were read one by one, plus five federal rules; one script turns them into the table every page uses.</p>
+    <p>{VALUE}</p>
+    <h2>1. The required amount: official pages only</h2>
+    <p>For each bond and state we looked for the statute or session law, then the page of the agency that collects the bond (Secretary of State for notaries, the motor vehicle department or dealer board for dealers, the contractor licensing board, the DMV for bonded titles). When an agency site refused automated reading, the same rule was read on the state legislature's site. Each amount is stored with the address of the page, a short quotation of the line and the date it was read. A state where we found the amount only on an agency or a bond seller's page is not listed.</p>
+    <Fragment set:html={table(['State bond', 'States read', 'States'], coverage, 'Title bonds are set as a multiple of the vehicle value, not as a fixed amount.', ['l', 'r', 'l'])} />
+    <p>Five federal rules apply in every state and were read on eCFR and the Department of Labor:</p>
+    <Fragment set:html={table(['Bond', 'Rule', 'Amount'], fedRows, undefined, ['l', 'l', 'l'])} />
+    <h2>2. Recent changes we caught</h2>
+    <p>Bond amounts move more than people think, and pages that rank often show the old figure. These changes were read in the legislation itself:</p>
+    <Fragment set:html={table(['Bond', 'State', 'Before', 'Now', 'Since'], changes, undefined, ['l', 'l', 'r', 'r', 'l'])} />
+    <h2>3. The premium: an estimate, and why</h2>
+    <p>Each surety files its rates with the insurance department of each state. Those filings are public in principle but sit in the SERFF filing system, which refused automated reading, and they differ from one surety to the next. We therefore built the estimate from the grids that bond agencies publish on their own pages ({ext(K.P.sources.bryant_cost.url, 'Bryant Surety Bonds')}, {ext(K.P.sources.sbcalc.url, 'Surety Bond Calc')}, {ext(K.P.sources.grit.url, 'Grit Insurance')}, {ext(K.P.sources.axcess.url, 'Axcess Surety')}). For each credit tier we keep the lowest low and the highest high of those grids. The result is wide on purpose: it is the span within which published offers fall, not a prediction of your quote.</p>
+    <Fragment set:html={table(['Credit score', ...Object.values(M.classes).map((c) => c.label.replace(/ \(.*\)/, ''))], tierRows, 'Rate as a percentage of the bond amount, per year.', ['l', 'r', 'r', 'r', 'r', 'r'])} />
+    <p>Most markets charge a minimum premium of {K.usd(M.minimum)} a year, applied to both ends of a range. A term of two or three years paid at once costs {K.dec(M.multiYear['2'], 1)} and {K.dec(M.multiYear['3'], 1)} times one year on the grid that publishes multi-year prices ({src('grit', 'Grit Insurance')}).</p>
+    <h2>4. Bonds priced another way</h2>
+    <p>Notary bonds are sold at a flat price for the whole commission, without a credit check. The estimate runs from {K.usd(M.notary.floorLow)} or {K.dec(M.notary.rateLow, 1)} % of the bond, whichever is higher, to {K.usd(M.notary.floorHigh)} or {K.dec(M.notary.rateHigh, 0)} % of the bond. Three states publish a price themselves and those figures replace the estimate: Michigan ($50 to $100, {src('mi_notary_faq', 'Department of State')}), Utah (about $50, {src('ut_notary', 'state notary site')}) and Tennessee ($30 to $55 in a {src('tn_tacir', '2025 state report')}).</p>
+    <p>Title bonds follow the schedule one agency publishes: {K.usd(M.title.base)} up to a {K.usd(M.title.baseUpTo)} bond, then {K.usd(M.title.perThousand)} per extra $1,000 ({src('bryant_title', 'Bryant title bond schedule')}). A Texas vehicle worth $12,000 needs a bond of 1.5 times its value and the estimate is {K.usd(exT)}.</p>
+    <p>Contract bonds (performance, payment, bid) use a standard sliding scale per $1,000 of contract price for applicants with good credit and clean financial statements ({src('axcess', 'Axcess Surety')}): {M.contract.scale.map(([w, r], i) => `${K.cents(r)} on the ${i === 0 ? 'first' : 'next'} ${w ? K.usd(w) : 'remainder'}`).join(', ')}. A $1,000,000 contract comes to {K.usd(exC.premium)}. Credit programs for jobs up to {K.usd(M.contract.creditProgramMax)} are shown at {K.dec(M.contract.creditProgramRate, 0)} %; below that, no standard estimate is given.</p>
+    <h2>5. A worked example</h2>
+    <p>An independent dealer in Texas needs a {K.usd(K.amt('auto-dealer', 'texas'))} bond. With a score of 700 or more, the dealer grid gives {K.dec(ex.rate[0], 2)} to {K.dec(ex.rate[1], 2)} % a year, so {K.usd(ex.perYear.lo)} to {K.usd(ex.perYear.hi)}. Under 550, the same bond is estimated at {K.usd(ex5.perYear.lo)} to {K.usd(ex5.perYear.hi)}. A surety may also decline, ask for collateral or place the dealer in a high-risk program.</p>
+    <h2>6. Figures left out</h2>
+    <ul>
+      <li>Rates filed by individual sureties (SERFF): not read, so no surety-specific price is shown.</li>
+      <li>States whose amount we could not verify on an official page: Ohio and Pennsylvania dealer bonds, the New York notary rule and the Arizona dealer bond, among others. They will appear when read.</li>
+      <li>Probate and court bonds: the court sets the amount case by case, so the calculator asks you to enter it.</li>
+      <li>Customs, utility, lottery and hundreds of local permit bonds: too many local rules to read reliably.</li>
+    </ul>
+    <h2>7. Limits</h2>
+    <ul>
+      <li>A legislature can change an amount at any time. The amount on the official page wins over ours; each state page shows the date it was read.</li>
+      <li>Credit score is only one input; sureties also look at experience, financial statements, claims and the industry.</li>
+      <li>Nothing here is legal or insurance advice and nothing is a quote.</li>
+    </ul>
+    <p>Corrections: <a href={route('contact', lang)}>contact page</a>.</p>
+  </article>
+</PageLayout>

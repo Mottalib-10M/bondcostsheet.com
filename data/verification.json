@@ -1,0 +1,25 @@
+{
+ "records": {
+  "federal/freight-broker": {
+   "status": "ok",
+   "http": 200
+  },
+  "federal/erisa": {
+   "status": "unreachable",
+   "http": 403
+  },
+  "federal/miller-act": {
+   "status": "ok",
+   "http": 200
+  },
+  "federal/bid-guarantee": {
+   "status": "ok",
+   "http": 200
+  },
+  "federal/dmepos": {
+   "status": "ok",
+   "http": 200
+  }
+ },
+ "checked": "2026-10-21"
+}

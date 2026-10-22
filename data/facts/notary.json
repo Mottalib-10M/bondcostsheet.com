@@ -1,0 +1,170 @@
+{
+ "TX": {
+  "amount": 10000,
+  "term_years": 4,
+  "statute": "Tex. Gov't Code \u00a7 406.010",
+  "quote": "A notary public must secure a $10,000 surety bond with a solvent surety company authorized to do business in Texas as a surety.",
+  "url": "https://www.sos.state.tx.us/statdoc/notaryforms.shtml",
+  "note": "The bond is approved by the Secretary of State and payable to the governor; errors and omissions insurance is separate and optional."
+ },
+ "FL": {
+  "amount": 7500,
+  "term_years": 4,
+  "statute": "Fla. Stat. \u00a7 117.01(7)",
+  "quote": "give bond, payable to any individual harmed as a result of a breach of duty by the notary public acting in his or her official capacity, in the amount of $7,500",
+  "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0117/Sections/0117.01.html",
+  "note": "The bond is filed with the Department of State through a bonding agency with the oath."
+ },
+ "CA": {
+  "amount": 15000,
+  "term_years": 4,
+  "statute": "Cal. Gov. Code \u00a7 8212",
+  "quote": "a person has 30 calendar days from the beginning of the term prescribed in the commission to take, subscribe, and file an oath of office and file a $15,000 surety bond with the county clerk's office",
+  "url": "https://notary.cdn.sos.ca.gov/forms/notary-handbook-current.pdf",
+  "note": "Online notaries need a second, separate $15,000 bond. The commission is void if the oath and bond are not filed within 30 days."
+ },
+ "PA": {
+  "amount": 25000,
+  "term_years": 4,
+  "statute": "57 Pa.C.S. \u00a7 321; 4 Pa. Code ch. 161 (effective March 28, 2026)",
+  "quote": "The bond amount is increased from $10,000 to $25,000.",
+  "url": "https://www.pa.gov/agencies/dos/programs/notaries/notary-regulations-changes",
+  "note": "Since March 28, 2026. A notary commissioned before that date keeps the $10,000 bond until the commission expires.",
+  "previous_amount": 10000,
+  "change_date": "2026-03-28"
+ },
+ "IL": {
+  "amount": 5000,
+  "term_years": 4,
+  "statute": "5 ILCS 312/2-105",
+  "quote": "a bond for $5,000 with a company qualified to write surety bonds in this State",
+  "url": "https://ilga.gov/legislation/ilcs/fulltext?DocName=000503120K2-105",
+  "note": "Remote and electronic notaries need $30,000 in total ($5,000 plus a $25,000 bond)."
+ },
+ "MI": {
+  "amount": 10000,
+  "term_years": 6,
+  "statute": "MCL 55.273",
+  "quote": "the bond shall be in the sum of $10,000.00 with good and sufficient surety by a surety licensed to do business in this state",
+  "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-55-273",
+  "note": "The state's FAQ says the bond generally costs $50 to $100. Michigan attorneys in good standing are exempt. The bond is written for the 6 to 7 year commission.",
+  "official_premium": {
+   "low": 50,
+   "high": 100,
+   "quote": "The cost of the surety bond will vary, generally between $50 to $100",
+   "url": "https://www.michigan.gov/sos/faqs/office-of-the-great-seal/notary"
+  }
+ },
+ "WA": {
+  "amount": 10000,
+  "term_years": 4,
+  "statute": "RCW 42.45.200",
+  "quote": "Every notary public must have a $10,000 surety bond in their name.",
+  "url": "https://dol.wa.gov/professional-licenses/notaries-public/frequently-asked-questions-notaries-public",
+  "note": "The Department of Licensing does not regulate what the bonding company charges."
+ },
+ "AZ": {
+  "amount": 5000,
+  "term_years": 4,
+  "statute": "A.R.S. \u00a7 41-269",
+  "quote": "purchase a four-year $5,000 notary bond",
+  "url": "https://azsos.gov/business/notary-public/notary-resources",
+  "note": "Bonds are bought in duplicate; the original goes to the Secretary of State with the application."
+ },
+ "MO": {
+  "amount": 10000,
+  "term_years": 4,
+  "statute": "RSMo \u00a7 486.235",
+  "quote": "The $10,000 notary bond shall be executed by a licensed Missouri surety for a term of four years commencing on the commission's issue date and terminating on its expiration date.",
+  "url": "https://s1.sos.mo.gov/business/notary/notarybond",
+  "note": "An errors and omissions policy does not replace the bond."
+ },
+ "IN": {
+  "amount": 25000,
+  "term_years": 8,
+  "statute": "IC 33-42-12-1",
+  "quote": "Your uploaded surety bond must be for a minimum amount of $25,000, have an 8-year term, and list your exact name as the principal.",
+  "url": "https://www.in.gov/sos/business/files/New-Notary-System-FAQs-5-4-26.pdf",
+  "note": "Commissions run eight years; a notary holding an older $5,000 bond keeps it until the commission expires."
+ },
+ "NV": {
+  "amount": 10000,
+  "term_years": 4,
+  "statute": "NRS 240.030",
+  "quote": "$10,000 (at a minimum) for a 4- year term",
+  "url": "https://www.nvsos.gov/licensing/notary",
+  "note": "The bond is filed with the county clerk of the county of residence."
+ },
+ "TN": {
+  "amount": 10000,
+  "term_years": 4,
+  "statute": "Tenn. Code Ann. \u00a7 8-16-104",
+  "quote": "Secure a surety bond. Bonds are available through Tennessee insurance companies/agencies that sell surety bond coverage. Provide proof of the bond to the County Clerk.",
+  "url": "https://sos.tn.gov/businesses/guides/how-to-become-a-notary",
+  "note": "A 2025 state TACIR report notes the $10,000 amount has not increased since 1993 and cites bond prices of $30 to $55.",
+  "official_premium": {
+   "low": 30,
+   "high": 55,
+   "quote": "a $10,000 bond at between $35 and $55 ... $30 to $45",
+   "url": "https://www.tn.gov/content/dam/tn/tacir/commission-meetings/2025-september/2025Sept_Tab5RealEstateFraud_DraftReport.pdf"
+  }
+ },
+ "AL": {
+  "amount": 50000,
+  "term_years": 4,
+  "statute": "Ala. Code \u00a7 36-20-71, as amended by Act 2023-548",
+  "quote": "Notaries public shall give bond with sureties, obtained from an Alabama licensed producer of such bonds, to be approved by the judge of probate of the county of their residence, in the sum of fifty thousand dollars ($50,000)",
+  "url": "https://www.sos.alabama.gov/sites/default/files/notaries-public/Act%202023-548.pdf",
+  "note": "Act 2023-548 raised the bond from $25,000 to $50,000; the bond must be bought from an Alabama-licensed bond producer and approved by the county probate judge.",
+  "previous_amount": 25000
+ },
+ "LA": {
+  "amount": 50000,
+  "term_years": null,
+  "statute": "La. R.S. 35:71, as amended by Act 258 of 2025",
+  "quote": "New law changes prior law to require that notaries public maintain a bond in the amount of $50,000.",
+  "url": "https://legis.la.gov/Legis/ViewDocument.aspx?d=1427881",
+  "note": "In force since February 1, 2026; an errors and omissions policy can no longer be filed in place of the bond. Louisiana commissions are for life, so the bond is kept in force continuously.",
+  "previous_amount": 10000,
+  "change_date": "2026-02-01"
+ },
+ "UT": {
+  "amount": 5000,
+  "term_years": 4,
+  "statute": "Utah Code \u00a7 46-1-4",
+  "quote": "a four-year notarial bond of $5,000 is required",
+  "url": "https://notary.utah.gov/notarial-bond/",
+  "note": "The state notary site says most notary bonds cost about $50; remote notaries need an additional $5,000 bond.",
+  "official_premium": {
+   "low": 50,
+   "high": 50,
+   "quote": "most notary bonds cost approximately $50",
+   "url": "https://notary.utah.gov/notarial-bond/"
+  }
+ },
+ "OK": {
+  "amount": 10000,
+  "term_years": 4,
+  "statute": "49 O.S. \u00a7 2",
+  "quote": "a surety bond in the amount of $10,000.00 signed by one or more sureties must be filed with the Secretary of State",
+  "url": "https://www.sos.ok.gov/notary/info/faqs.aspx",
+  "note": "Older Secretary of State forms still show $1,000; the current FAQ, instructions and guide say $10,000. The bond is filed within 60 days of the commission."
+ },
+ "CO": {
+  "required": false,
+  "amount": null,
+  "term_years": null,
+  "statute": "C.R.S. \u00a7 24-21-501 et seq. (RULONA)",
+  "quote": "a notary does not have to be bonded in Colorado",
+  "url": "https://www.sos.state.co.us/pubs/notary/FAQ/general.html",
+  "note": "No notary bond is required; some notaries buy one voluntarily."
+ },
+ "WI": {
+  "amount": 500,
+  "term_years": 4,
+  "statute": "Wis. Stat. \u00a7 140.02(1)(d)",
+  "quote": "take the oath and file a $500 bond",
+  "url": "https://docs.legis.wisconsin.gov/statutes/statutes/140/02",
+  "note": "The surety must be approved by the Department of Financial Institutions."
+ }
+}

@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, AUTHOR_DESC, CONTACT_EMAIL } from '../../data/site-config';
+import { VALUE } from '../../content/home';
+import { KIT as K } from '../../lib/kit';
+import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('about', lang);
+const title = 'Surety Bond Amounts 2026: Who Publishes Bond Cost Sheet';
+const description = 'Surety bond amounts and premium estimates for 2026, by Radif Partners from statutes, state agencies, DMVs and eCFR: no agency, no quote form, no commission.';
+const recN = K.TYPES.reduce((a, t) => a + t.states.length, 0);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>About Bond Cost Sheet</h1>
+    <p>{AUTHOR_DESC.en}</p>
+    <h2>The gap this site fills</h2>
+    <p>Type "surety bond cost" into a search engine and almost every page belongs to a bond agency. The price it shows is a national range of one to fifteen percent, the calculator asks for an e-mail address or a phone number before it gives an answer, and the amount your state requires is left for you to find. Several of those pages still print bond amounts that states changed in 2024, 2025 or 2026, because nobody rereads the statute once the page ranks.</p>
+    <p>{VALUE}</p>
+    <h2>Who publishes it</h2>
+    <p>The site is published by {AUTHOR_NAME}, a company that builds calculators on public rules and public data. It is not a surety, a bond agency, an insurance producer, a law firm or a referral service. It sells no bond, sends no lead to anyone, receives no commission and carries no affiliate link.</p>
+    <LegalIdentity lang={lang} />
+    <h2>What we rely on</h2>
+    <p>{recN} state rules for notary, auto dealer, contractor license and title bonds, each read on the statute, the Secretary of State, the licensing board or the DMV and quoted on the state pages; the federal rules for freight brokers (49 CFR 387.307), ERISA plans (Department of Labor Field Assistance Bulletin 2008-04), federal construction (FAR 28.102) and bid guarantees (FAR 28.101-2). Premiums come from rate grids that bond agencies publish, combined into a range for each credit tier and always labeled as estimates.</p>
+    <h2>What the site leaves out</h2>
+    <p>Rates filed by each surety with state insurance departments, which could not be read in bulk; states whose amount we could not verify on an official page; and any judgment on a surety, an agency or your chance of approval. The <a href={route('method', lang)}>method page</a> lists every rule and limit; the <a href={route('editorial', lang)}>editorial policy</a> explains corrections.</p>
+    <h2>Contact</h2>
+    <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, for corrections and new bond amounts. We answer questions about a figure or a source, not about your own bond application.</p>
+  </article>
+</PageLayout>

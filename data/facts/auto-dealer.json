@@ -1,0 +1,119 @@
+{
+ "CA": {
+  "amount": 50000,
+  "term_years": null,
+  "statute": "Cal. Veh. Code \u00a7 11710",
+  "quote": "are held and firmly bound to the People of the State of California in the penal sum of FIFTY THOUSAND DOLLARS ($50,000)",
+  "url": "https://www.dmv.ca.gov/portal/uploads/2020/04/ol25.pdf",
+  "note": "Continuous bond on DMV form OL 25; a cash deposit (OL 25E) can replace it. Wholesale-only dealers selling fewer than 25 vehicles a year can claim an exemption (OL 56).",
+  "variants": [
+   {
+    "label": "Retail or wholesale dealer",
+    "amount": 50000
+   },
+   {
+    "label": "Wholesale-only, under 25 vehicles a year (exemption)",
+    "amount": 0
+   }
+  ]
+ },
+ "TX": {
+  "amount": 50000,
+  "term_years": 2,
+  "statute": "Tex. Transp. Code \u00a7 503.033 (HB 3533, 2021)",
+  "quote": "all new and renewal GDN license applications must be submitted with a $50,000 Motor Vehicle Dealer Surety Bond",
+  "url": "https://www.txdmv.gov/sites/default/files/body-files/Motor_Vehicle_Dealer_Manual.pdf",
+  "note": "Independent GDN dealers since September 1, 2021. Franchised dealers and trailer-only GDNs are exempt. The bond runs two years with the license.",
+  "previous_amount": 25000
+ },
+ "FL": {
+  "amount": 25000,
+  "term_years": 1,
+  "statute": "Fla. Stat. \u00a7 320.27(10)",
+  "quote": "a good and sufficient surety bond or irrevocable letter of credit, executed by the applicant-dealer as principal, in the sum of $25,000",
+  "url": "https://www.flsenate.gov/laws/statutes/2022/320.27",
+  "note": "Filed on FLHSMV form HSMV 86020 in the exact state wording; a $25,000 letter of credit from a Florida bank can replace it."
+ },
+ "GA": {
+  "amount": 35000,
+  "term_years": 2,
+  "statute": "O.C.G.A. \u00a7 43-47-8(h); Ga. Comp. R. & Regs. 681-3-.01",
+  "quote": "$35,000 Surety Bond",
+  "url": "https://sos.ga.gov/how-to-guide/how-guide-used-motor-vehicle-dealers",
+  "note": "Used motor vehicle dealers; a separate bond for each licensed location, expiring September 30 of even-numbered years. Parts dealers need $10,000."
+ },
+ "NC": {
+  "amount": 50000,
+  "term_years": null,
+  "statute": "N.C.G.S. \u00a7 20-288(e)",
+  "quote": "fifty thousand dollars ($50,000) for one established salesroom",
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_20/GS_20-288.html",
+  "note": "$25,000 more for each additional established salesroom. Form LT-409 (surety) or LT-408 (cash bond).",
+  "variants": [
+   {
+    "label": "First established salesroom",
+    "amount": 50000
+   },
+   {
+    "label": "Each additional salesroom",
+    "amount": 25000
+   }
+  ]
+ },
+ "IL": {
+  "amount": 50000,
+  "term_years": 1,
+  "statute": "625 ILCS 5/5-101 and 5/5-102",
+  "quote": "original $50,000 Illinois vehicle dealer's bond or certificate of deposit",
+  "url": "https://www.ilsos.gov/content/dam/publications/pdf_publications/vsd659.pdf",
+  "note": "Per location, for new and used dealers; the bond must run at least to December 31 of the license year."
+ },
+ "NY": {
+  "amount": 20000,
+  "term_years": null,
+  "statute": "N.Y. Veh. & Traf. Law \u00a7 415(6-b)",
+  "quote": "$100,000 \u2013 Retail or Wholesale Motor Vehicle Dealer (other than New) that sold more than 50 vehicles during the previous calendar year",
+  "url": "https://dmv.ny.gov/dealers/dealer-surety-bond",
+  "note": "The amount depends on the dealer type and last year's sales. Dealers of trailers, motorcycles, vehicles over 10,000 lb, ATVs, boats and snowmobiles are exempt.",
+  "variants": [
+   {
+    "label": "Used or wholesale dealer, 50 or fewer sales last year",
+    "amount": 20000
+   },
+   {
+    "label": "Franchised new car dealer",
+    "amount": 50000
+   },
+   {
+    "label": "Used or wholesale dealer, more than 50 sales last year",
+    "amount": 100000
+   }
+  ]
+ },
+ "VA": {
+  "amount": 50000,
+  "term_years": 3,
+  "statute": "Va. Code \u00a7 46.2-1527.2",
+  "quote": "the applicant must file a $50,000 bond with the Board",
+  "url": "https://law.lis.virginia.gov/vacode/title46.2/chapter15/section46.2-1527.2/",
+  "note": "Required for the first three consecutive years of operation; a lapse restarts the count. Claims above the bond go to the Motor Vehicle Transaction Recovery Fund."
+ },
+ "WA": {
+  "amount": 30000,
+  "term_years": null,
+  "statute": "RCW 46.70.070",
+  "quote": "a surety bond in the amount of: (a) For motor vehicle dealers, thirty thousand dollars",
+  "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=46.70.070",
+  "note": "One bond per business location; miscellaneous dealers need $5,000.",
+  "variants": [
+   {
+    "label": "Motor vehicle dealer",
+    "amount": 30000
+   },
+   {
+    "label": "Miscellaneous vehicle dealer",
+    "amount": 5000
+   }
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "TX": {
+  "amount": null,
+  "multiplier": 1.5,
+  "term_years": null,
+  "statute": "Tex. Transp. Code \u00a7 501.053; 43 TAC \u00a7 217.9",
+  "quote": "The amount is equal to 1 \u00bd times the value of the vehicle.",
+  "url": "https://www.txdmv.gov/motorists/buying-or-selling-a-vehicle/bought-a-vehicle-with-no-title",
+  "note": "Value comes from the Standard Presumptive Value first, then a NADA guide, then a dealer or insurance adjuster appraisal. You have one year from the notice to buy the bond. No bonded title on a vehicle with a lien under 10 years old without a release.",
+  "value_basis": "Standard Presumptive Value, then NADA guide, then appraisal"
+ },
+ "CA": {
+  "amount": null,
+  "multiplier": 1.0,
+  "term_years": null,
+  "statute": "Cal. Veh. Code \u00a7\u00a7 4157, 38050; 13 CCR \u00a7 152",
+  "quote": "the bond must be for an amount equal to the market value of the vehicle/vessel",
+  "url": "https://www.dmv.ca.gov/portal/handbook/vehicle-industry-registration-procedures-manual-2/bonds-and-certifications/introduction/",
+  "note": "Needed when regular proof of ownership is missing and the vehicle is worth $5,000 or more. Market value is the midpoint of a valuation guide or a licensed dealer's written appraisal. Bond on DMV form REG 5057, surety signature notarized; a cash deposit can replace it.",
+  "value_basis": "market value from a valuation guide or dealer appraisal",
+  "threshold": 5000
+ },
+ "VT": {
+  "amount": null,
+  "multiplier": 1.5,
+  "term_years": 3,
+  "statute": null,
+  "quote": "The value of the bond must be one and one-half times the J. D. Power average trade-in value.",
+  "url": "https://dmv.vermont.gov/tax-title/vehicle-title/bonded-title",
+  "note": "The bonded title becomes a regular title after three years.",
+  "value_basis": "J. D. Power average trade-in value"
+ }
+}

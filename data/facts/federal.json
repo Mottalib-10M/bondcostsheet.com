@@ -1,0 +1,46 @@
+{
+ "freight-broker": {
+  "amount": 75000,
+  "statute": "49 CFR \u00a7 387.307",
+  "quote": "A broker must have a surety bond or trust fund of $75,000 in effect.",
+  "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-387/subpart-C/section-387.307",
+  "note": "Filed with FMCSA on form BMC-84 (bond) or BMC-85 (trust fund). The section, as amended, applies from January 16, 2026: FMCSA can suspend a broker whose bond falls below $75,000 after a claim payment."
+ },
+ "erisa": {
+  "pct": 0.1,
+  "min": 1000,
+  "max": 500000,
+  "max_employer_securities": 1000000,
+  "statute": "ERISA \u00a7 412, 29 U.S.C. \u00a7 1112; DOL Field Assistance Bulletin 2008-04",
+  "quote": "A plan official must be bonded for at least 10% of the amount of funds he or she handles, subject to a minimum bond amount of $1,000 per plan",
+  "url": "https://www.dol.gov/agencies/ebsa/employers-and-advisers/guidance/field-assistance-bulletins/2008-04",
+  "note": "The maximum required is $500,000 per plan official in most cases, $1,000,000 for plans that hold employer securities. The bond covers fraud and dishonesty by people who handle plan money."
+ },
+ "miller-act": {
+  "threshold": 150000,
+  "alt_from": 35000,
+  "pct_performance": 1.0,
+  "pct_payment": 1.0,
+  "statute": "40 U.S.C. \u00a7\u00a7 3131-3134; FAR 28.102-1 and 28.102-2",
+  "quote": "requires performance and payment bonds for any construction contract exceeding $150,000",
+  "url": "https://www.ecfr.gov/current/title-48/chapter-1/subchapter-E/part-28/subpart-28.1/section-28.102-1",
+  "url2": "https://www.ecfr.gov/current/title-48/chapter-1/subchapter-E/part-28/subpart-28.1/section-28.102-2",
+  "quote2": "the penal amount of performance bonds must equal\u2014 (i) 100 percent of the original contract price",
+  "note": "Above $150,000, the performance bond and the payment bond each equal 100% of the original contract price, plus 100% of any increase. From $35,000 to $150,000 the contracting officer picks two or more payment protections instead."
+ },
+ "bid-guarantee": {
+  "pct": 0.2,
+  "cap": 3000000,
+  "statute": "FAR 28.101-2",
+  "quote": "The bid guarantee amount shall be at least 20 percent of the bid price but shall not exceed $3 million.",
+  "url": "https://www.ecfr.gov/current/title-48/chapter-1/subchapter-E/part-28/subpart-28.1/section-28.101-2",
+  "note": "Federal rule. State and local owners set their own bid security, often 5% or 10% of the bid: read the invitation for bids."
+ },
+ "dmepos": {
+  "amount": 50000,
+  "statute": "42 CFR \u00a7 424.57(d)",
+  "quote": "must submit to the CMS contractor a surety bond from an authorized surety of $50,000",
+  "url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-424/subpart-D/section-424.57",
+  "note": "Per practice location, with an elevated amount if CMS requires it after adverse legal actions."
+ }
+}

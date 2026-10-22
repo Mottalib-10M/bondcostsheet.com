@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('contact', lang);
+const description = 'Write to Bond Cost Sheet about a bond amount or a rule that changed. E-mail only: no quote, no agency referral, nothing passed on to a surety or anyone else.';
+---
+<PageLayout title="Contact Bond Cost Sheet: report a bond amount that changed" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path, lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Contact</h1>
+    <p>By e-mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. There is no form and no phone line. Most bond cost pages exist to collect a phone number for an agency; this one keeps nothing and sends nothing to anyone.</p>
+    <h2>Messages that help</h2>
+    <ul>
+      <li>A state that raised or cut a bond amount: name the state, the bond and the statute, bill or agency page where the new amount appears, with its effective date.</li>
+      <li>A state we do not cover yet for a bond, when you know the official page that states the amount.</li>
+      <li>A rate filing or a published premium schedule from a surety that would sharpen an estimate.</li>
+      <li>Embedding the calculator on a small business center, chamber or library page: the code is on the <a href={route('widget', lang)}>embed page</a>.</li>
+    </ul>
+    <h2>What we cannot do</h2>
+    <p>We do not quote bonds, review applications, recommend a surety or predict underwriting. For your own bond, a licensed surety or producer prices it; for your license, the agency that requires the bond decides.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+  </div>
+</PageLayout>
