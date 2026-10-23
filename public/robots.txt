@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://us-surety-bonds.example/sitemap-index.xml
+Sitemap: https://bondcostsheet.com/sitemap-index.xml

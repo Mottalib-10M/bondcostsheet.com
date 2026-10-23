@@ -1,5 +1,5 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://us-surety-bonds.example";
+export const SITE_URL = "https://bondcostsheet.com";
 export const SITE_NAMES: Record<string, string> = {"en": "Bond Cost Sheet"};
 export const LANG_TAGS: Record<string, string> = {"en": "en-US"};
 export const OG_LOCALES: Record<string, string> = {"en": "en_US"};
@@ -16,7 +16,7 @@ export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners reads 
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"en": ["Surety bond premiums and credit-based pricing", "Notary public bond requirements by state", "Motor vehicle dealer bonds", "Contractor license bonds", "Bonded titles for vehicles without a title", "Freight broker BMC-84 bonds", "ERISA fidelity bonds", "Miller Act performance, payment and bid bonds"]};
-export const CONTACT_EMAIL = "contact@us-surety-bonds.example";
+export const CONTACT_EMAIL = "contact@bondcostsheet.com";
 export const THEME_COLOR = '#1F5566';
 export const LOGO_SYMBOL = 'BND';
 export const BING_VERIFY_CODE = '';
